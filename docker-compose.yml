@@ -8,6 +8,7 @@ services:
       - ./letsencrypt/fullchain.pem:/etc/letsencrypt/fullchain.pem
       - ./letsencrypt/privkey.pem:/etc/letsencrypt/privkey.pem
       - ./letsencrypt/chain.pem:/etc/letsencrypt/chain.pem
+      - ./html:/var/www/html
     ports:
       - 80:80
       - 443:443
