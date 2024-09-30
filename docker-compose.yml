@@ -5,9 +5,7 @@ services:
     image: nginx
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - ./letsencrypt/fullchain.pem:/etc/letsencrypt/fullchain.pem
-      - ./letsencrypt/privkey.pem:/etc/letsencrypt/privkey.pem
-      - ./letsencrypt/chain.pem:/etc/letsencrypt/chain.pem
+      - ./letsencrypt:/etc/letsencrypt
       - ./html:/var/www/html
     ports:
       - 80:80
